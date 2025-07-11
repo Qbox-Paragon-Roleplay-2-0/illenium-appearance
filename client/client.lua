@@ -321,6 +321,7 @@ local function RegisterChangeOutfitMenu(id, parent, outfits, mType)
         id = id,
         title = _L("outfits.change.title"),
         menu = parent,
+        position = 'top-left', -- Lation UI
         options = {}
     }
     for i = 1, #outfits, 1 do
@@ -351,6 +352,7 @@ local function RegisterUpdateOutfitMenu(id, parent, outfits)
         id = id,
         title = _L("outfits.update.title"),
         menu = parent,
+        position = 'top-left', -- Lation UI
         options = {}
     }
     for i = 1, #outfits, 1 do
@@ -374,6 +376,7 @@ local function RegisterGenerateOutfitCodeMenu(id, parent, outfits)
         id = id,
         title = _L("outfits.generate.title"),
         menu = parent,
+        position = 'top-left', -- Lation UI
         options = {}
     }
     for i = 1, #outfits, 1 do
@@ -393,6 +396,7 @@ local function RegisterDeleteOutfitMenu(id, parent, outfits, deleteEvent)
         id = id,
         title = _L("outfits.delete.title"),
         menu = parent,
+        position = 'top-left', -- Lation UI
         options = {}
     }
 
@@ -423,6 +427,7 @@ RegisterNetEvent("illenium-appearance:client:OutfitManagementMenu", function(arg
     local managementMenu = {
         id = managementMenuID,
         title = string.format(_L("outfits.manage.title"), args.type),
+        position = 'top-left', -- Lation UI
         options = {
             {
                 title = _L("outfits.change.title"),
@@ -513,6 +518,7 @@ local function RegisterWorkOutfitsListMenu(id, parent, menuData)
         id = id,
         menu = parent,
         title = _L("jobOutfits.title"),
+        position = 'top-left', -- Lation UI
         options = {}
     }
     local event = "illenium-appearance:client:loadJobOutfit"
@@ -534,7 +540,8 @@ end
 function OpenMenu(isPedMenu, menuType, menuData)
     local mainMenuID = "illenium_appearance_main_menu"
     local mainMenu = {
-        id = mainMenuID
+        id = mainMenuID,
+        position = 'top-left', -- Lation UI
     }
     local menuItems = {}
 

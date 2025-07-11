@@ -1,11 +1,11 @@
-Config = {}
+Config = Config or {}
 
 Config.Debug = false
 
-Config.ClothingCost = 100
-Config.BarberCost = 100
-Config.TattooCost = 100
-Config.SurgeonCost = 100
+Config.ClothingCost = 150
+Config.BarberCost = 150
+Config.TattooCost = 150
+Config.SurgeonCost = 150
 
 Config.ChargePerTattoo = true -- Charge players per tattoo. Config.TattooCost will become the cost of 1 tattoo. The cost can be overridden by adding `cost` key in shared/tattoos.lua for specific tattoos
 
@@ -17,7 +17,7 @@ Config.AsynchronousLoading = false -- Change this to false if you want the NUI d
 Config.UseTarget = false
 
 Config.TextUIOptions = {
-    position = "left-center"
+    position = "right-center"
 }
 
 Config.NotifyOptions = {
@@ -26,8 +26,8 @@ Config.NotifyOptions = {
 
 Config.OutfitCodeLength = 10
 
-Config.UseRadialMenu = false
-Config.UseOxRadial = false -- Set to true to use ox_lib radial menu, both this and UseRadialMenu must be true 
+Config.UseRadialMenu = true
+Config.UseOxRadial = true -- Set to true to use ox_lib radial menu, both this and UseRadialMenu must be true
 
 Config.EnablePedsForShops = true
 Config.EnablePedsForClothingRooms = true
@@ -36,7 +36,7 @@ Config.EnablePedsForPlayerOutfitRooms = true
 Config.EnablePedMenu = true
 Config.PedMenuGroup = "group.admin"
 
-Config.EnableJobOutfitsCommand = false -- Enables /joboutfits and /gangoutfits commands
+Config.EnableJobOutfitsCommand = true -- Enables /joboutfits and /gangoutfits commands
 
 Config.ShowNearestShopOnly = false
 Config.HideRadar = false -- Hides the minimap while the appearance menu is open
@@ -65,9 +65,9 @@ Config.GenderBasedOnPed = true
 Config.AlwaysKeepProps = false
 
 Config.PersistUniforms = false -- Keeps Job / Gang Outfits on player reconnects / logout
-Config.OnDutyOnlyClothingRooms = false -- Set to `true` to make the clothing rooms accessible only to players who are On Duty
+Config.OnDutyOnlyClothingRooms = true -- Set to `true` to make the clothing rooms accessible only to players who are On Duty
 
-Config.BossManagedOutfits = false -- Allows Job / Gang bosses to manage their own job / gang outfits
+Config.BossManagedOutfits = true -- Allows Job / Gang bosses to manage their own job / gang outfits
 
 Config.ReloadSkinCooldown = 5000
 
@@ -372,6 +372,90 @@ Config.Stores = {
             vector3(122.56930541992, -207.83396911621, 54.56)
         }
     },
+    {   -- MRPD
+        type = "clothing",
+        coords = vector4(468.23, -998.72, 30.71, 86.98),
+        size = vector3(4, 4, 4),
+        rotation = 45,
+        usePoly = false,
+        showBlip = false,
+        points = {
+            vector3(465.99990844727, -995.64965820312, 30.710699081421),
+            vector3(468.54370117188, -995.64483642578, 30.710699081421),
+            vector3(468.56677246094, -1002.4751586914, 30.710699081421),
+            vector3(465.96423339844, -1002.4677124023, 30.710699081421)
+        }
+    },
+    -- {   -- VPD
+    --     type = "clothing",
+    --     coords = vector4(609.24, 9.52, 87.8, 175.73),
+    --     size = vector3(4, 4, 4),
+    --     rotation = 45,
+    --     usePoly = false,
+    --     showBlip = false,
+    --     points = {
+    --         vector3(609.97711181641, 8.8600940704346, 87.801986694336),
+    --         vector3(604.26763916016, 10.930154800415, 87.801986694336),
+    --         vector3(606.06280517578, 15.884231567383, 87.801986694336),
+    --         vector3(611.73504638672, 13.744466781616, 87.801986694336),
+    --     }
+    -- },
+    {   -- DPPD
+        type = "clothing",
+        coords = vector4(-602.32, -421.96, 35.17, 1.38),
+        size = vector3(4, 4, 4),
+        rotation = 45,
+        usePoly = false,
+        showBlip = false,
+        points = {
+            vector3(-599.12548828125, -420.03479003906, 35.172260284424),
+            vector3(-599.04315185547, -425.48919677734, 35.172260284424),
+            vector3(-604.8955078125, -425.50769042969, 35.172260284424),
+            vector3(-604.95031738281, -419.98449707031, 35.172260284424)
+        }
+    },
+    {   -- LSCSO
+        type = "clothing",
+        coords = vector4(1829.23, 3678.23, 34.71, 304.74),
+        size = vector3(4, 4, 4),
+        rotation = 45,
+        usePoly = false,
+        showBlip = false,
+        points = {
+            vector3(1832.8962402344, 3677.3659667969, 34.712333679199),
+            vector3(1829.3576660156, 3675.3293457031, 34.712333679199),
+            vector3(1826.9946289062, 3679.4155273438, 34.712333679199),
+            vector3(1830.5828857422, 3681.4831542969, 34.712333679199)
+        }
+    },
+    {   -- MZMC
+        type = "clothing",
+        coords = vector4(-442.4, -312.55, 34.91, 194.69),
+        size = vector3(4, 4, 4),
+        rotation = 45,
+        usePoly = false,
+        showBlip = false,
+        points = {
+            vector3(-443.443359375, -314.28860473633, 34.91051864624),
+            vector3(-440.79440307617, -313.23245239258, 34.91051864624),
+            vector3(-441.64562988281, -311.14755249023, 34.91051864624),
+            vector3(-444.30438232422, -312.21301269531, 34.91051864624)
+        }
+    },
+    {   -- SSC
+        type = "clothing",
+        coords = vector4(1662.05, 3658.69, 35.34, 216.83),
+        size = vector3(4, 4, 4),
+        rotation = 45,
+        usePoly = false,
+        showBlip = false,
+        points = {
+            vector3(1661.2030029297, 3658.8513183594, 35.339664459229),
+            vector3(1662.615234375, 3656.4504394531, 35.339664459229),
+            vector3(1664.4829101562, 3657.5888671875, 35.339664459229),
+            vector3(1663.0913085938, 3659.9702148438, 35.339664459229)
+        }
+    },
     {
         type = "barber",
         coords = vector4(-814.22, -183.7, 37.57, 116.91),
@@ -553,28 +637,41 @@ Config.Stores = {
             vector3(293.56317138672, -572.60675048828, 43.26),
             vector3(296.28656005859, -570.330078125, 43.26)
         }
+    },
+    {   -- MZMC
+        type = "surgeon",
+        coords = vector4(-454.69, -315.11, 34.91, 288.04),
+        size = vector3(4, 4, 4),
+        rotation = 45,
+        usePoly = false,
+        points = {
+            vector3(-459.07803344727, -314.86901855469, 34.910778045654),
+            vector3(-457.60461425781, -318.43783569336, 34.910778045654),
+            vector3(-452.64599609375, -316.49243164062, 34.910778045654),
+            vector3(-454.10653686523, -312.74685668945, 34.910778045654)
+        }
     }
 }
 
 
 Config.ClothingRooms = {
-    {
-        job = "police",
-        coords = vector4(454.91, -990.89, 30.69, 193.4),
-        size = vector3(4, 4, 4),
-        rotation = 45,
-        usePoly = false,
-        points = {
-            vector3(460.41918945312, -993.11444091797, 30.69),
-            vector3(449.39508056641, -993.60614013672, 30.69),
-            vector3(449.88696289062, -990.23779296875, 30.69),
-            vector3(450.97882080078, -989.71411132812, 30.69),
-            vector3(451.0325012207, -987.89904785156, 30.69),
-            vector3(453.47863769531, -987.76928710938, 30.69),
-            vector3(454.35513305664, -988.46459960938, 30.69),
-            vector3(460.4231262207, -987.94573974609, 30.69)
-        }
-    }
+    -- {
+    --     job = "police",
+    --     coords = vector4(454.91, -990.89, 30.69, 193.4),
+    --     size = vector3(4, 4, 4),
+    --     rotation = 45,
+    --     usePoly = false,
+    --     points = {
+    --         vector3(460.41918945312, -993.11444091797, 30.69),
+    --         vector3(449.39508056641, -993.60614013672, 30.69),
+    --         vector3(449.88696289062, -990.23779296875, 30.69),
+    --         vector3(450.97882080078, -989.71411132812, 30.69),
+    --         vector3(451.0325012207, -987.89904785156, 30.69),
+    --         vector3(453.47863769531, -987.76928710938, 30.69),
+    --         vector3(454.35513305664, -988.46459960938, 30.69),
+    --         vector3(460.4231262207, -987.94573974609, 30.69)
+    --     }
+    -- }
 }
 
 

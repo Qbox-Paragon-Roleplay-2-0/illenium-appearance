@@ -320,12 +320,12 @@ Locales["en"] = {
         }
     },
     textUI = {
-        clothing = "Clothing Store - Price: $%d",
-        barber = "Barber - Price: $%d",
-        tattoo = "Tattoo Shop - Price: $%d",
-        surgeon = "Plastic Surgeon - Price: $%d",
-        clothingRoom = "Clothing Room",
-        playerOutfitRoom = "Outfits"
+        clothing = "[Z] Clothing Store - Price: $%d",
+        barber = "[Z] Barber - Price: $%d",
+        tattoo = "[Z] Tattoo Shop - Price: $%d",
+        surgeon = "[Z] Plastic Surgeon - Price: $%d",
+        clothingRoom = "[Z] Clothing Room",
+        playerOutfitRoom = "[Z] Outfits"
     },
     migrate = {
         success = {
