@@ -17,11 +17,11 @@ Config.AsynchronousLoading = false -- Change this to false if you want the NUI d
 Config.UseTarget = false
 
 Config.TextUIOptions = {
-    position = "right-center"
+    position = "left-center"
 }
 
 Config.NotifyOptions = {
-    position = "top-right"
+    position = "center-right"
 }
 
 Config.OutfitCodeLength = 10
